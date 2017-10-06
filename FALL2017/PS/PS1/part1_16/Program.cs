@@ -6,8 +6,9 @@ namespace part1_16
     {
         static void Main(string[] args)
         {
-            //Решение задачи №16 из 1 части
-           
+            // Решение задачи №16 из 1 части
+            // Решил Петрушенко Артур из группы 11-707
+
             Console.WriteLine("Введите номер билета");
             int number = int.Parse(Console.ReadLine());
             int firstSum = 0, secondSum = 0;
