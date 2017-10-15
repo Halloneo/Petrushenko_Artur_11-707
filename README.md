@@ -1,2 +1,2 @@
-# SemestovieZadachi
+# Tasks for Semester
 All tasks
