@@ -13,6 +13,7 @@ namespace part3_3
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, world!");
+            Console.WriteLine("Heelo, Git");
         }
     }
 }
