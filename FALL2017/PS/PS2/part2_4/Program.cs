@@ -8,7 +8,7 @@ namespace part2_4
 {
     class Program
     {
-        // Петрушенко Артур Решение задачи 6 из 2 части PS2
+        // Петрушенко Артур Решение задачи 4 из 2 части PS2
         public static double CalculatePI4Task(double E)
         {
             double k = 2;
