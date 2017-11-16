@@ -12,34 +12,34 @@ namespace part4_9
         {
             return Math.Sqrt(Math.Tan(x));
         }
-        //
+        // Формула левых прямоугольников
         public static double formulaOfLeftRectangles(double a, double b, int n)
         {
             double sum = 0;
-            double del = (b - a) / n;            
+            double del = (b - a) / n;
 
             for (int i = 0; i < n; i++)
                 sum += Function(a + i * del);
 
             return del * sum;
         }
-        //
+        // Формула правых прямоугольников
         public static double formulaOfRightRectangles(double a, double b, int n)
         {
             double sum = 0;
-            double del = (b - a) / n;            
+            double del = (b - a) / n;
 
             for (int i = 1; i <= n; i++)
                 sum += Function(a + i * del);
 
             return del * sum;
         }
-        //
+        // Формула Трапеций
         public static double formulaOfTrapeze(double a, double b, int n)
         {
             double sum = 0;
             double del = (b - a) / (n);
-            
+
 
             double previous = Function(a);
             double current;
@@ -54,7 +54,7 @@ namespace part4_9
 
             return del * sum / 2;
         }
-        //
+        // Формула Симпсона
         public static double formulaOfSimpson(double a, double b, int n)
         {
             double del = (b - a) / n;
@@ -74,18 +74,18 @@ namespace part4_9
 
             return del / 3 * ((Function(a) + 2 * sum1 + 4 * sum2 + Function(b)));
         }
-        //
+        // Формула Монте Карло
         public static double formulaOfMonteCarlo(double a, double b, int n)
         {
             double sum = 0;
-            double del = (b - a) / n;            
+            double del = (b - a) / n;
             Random random = new Random();
 
             for (int i = 0; i < n; i++)
                 sum += Function(a + random.NextDouble() * (b - a));
             return sum * del;
         }
-        //
+        // 
         static void Main(string[] args)
         {
             //int n = int.Parse(Console.ReadLine());

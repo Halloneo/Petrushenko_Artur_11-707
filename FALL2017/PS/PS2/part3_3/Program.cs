@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace part3_3
 {
     class Program
     {
-        // Петрушенко Артур Решение задачи 3 из 3 части PS2
+        // Петрушенко Артур решение задачи 3 из 3 части PS2
         static public double CalculateGaussLezhandrTask3(double E)
         {
             double a = 1.0;
@@ -36,7 +32,7 @@ namespace part3_3
             double answer = CalculateGaussLezhandrTask3(E);
 
             Console.WriteLine($"{answer}");
-
+            Console.ReadKey();
         }
     }
 }

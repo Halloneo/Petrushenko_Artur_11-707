@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace part1_14
 {
     class Program
     {
-        // Петрушенко Артур Решение задачи 14 из 1 части PS2
+        // Петрушенко Артур решение задачи 14 из 1 части PS2
         public static double CalculateSum14Task(double E, double x, out int iterations)
         {
             double sum = 1;

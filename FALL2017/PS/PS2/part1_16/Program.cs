@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace part1_16
 {
     class Program
     {
-        // Петрушенко Артур Решение задачи 16 из 1 части PS2
+        // Петрушенко Артур решение задачи 16 из 1 части PS2
         public static double CalculateSum16Task(double E, out int iterations)
         {
             double item = 1;

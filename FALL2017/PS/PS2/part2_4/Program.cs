@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace part2_4
 {
     class Program
     {
-        // Петрушенко Артур Решение задачи 4 из 2 части PS2
+        // Петрушенко Артур решение задачи 4 из 2 части PS2
         public static double CalculatePI4Task(double E)
         {
             double k = 2;

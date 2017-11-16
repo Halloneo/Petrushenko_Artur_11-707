@@ -12,7 +12,7 @@ namespace part4_14
         {
             return Math.Sin(Math.Tan(x));
         }
-        //
+        // Формула левых прямоугольников
         public static double formulaOfLeftRectangles(double a, double b, int n)
         {
             double sum = 0;
@@ -23,7 +23,7 @@ namespace part4_14
 
             return del * sum;
         }
-        //
+        // Формула правых прямоугольников
         public static double formulaOfRightRectangles(double a, double b, int n)
         {
             double sum = 0;
@@ -34,7 +34,7 @@ namespace part4_14
 
             return del * sum;
         }
-        //
+        // Формула Трапеций
         public static double formulaOfTrapeze(double a, double b, int n)
         {
             double sum = 0;
@@ -54,7 +54,7 @@ namespace part4_14
 
             return del * sum / 2;
         }
-        //
+        // Формула Симпсона
         public static double formulaOfSimpson(double a, double b, int n)
         {
             double del = (b - a) / n;
@@ -74,7 +74,7 @@ namespace part4_14
 
             return del / 3 * ((Function(a) + 2 * sum1 + 4 * sum2 + Function(b)));
         }
-        //
+        // Формула Монте Карло
         public static double formulaOfMonteCarlo(double a, double b, int n)
         {
             double sum = 0;
@@ -85,7 +85,7 @@ namespace part4_14
                 sum += Function(a + random.NextDouble() * (b - a));
             return sum * del;
         }
-        //
+        // 
         static void Main(string[] args)
         {
             //int n = int.Parse(Console.ReadLine());
