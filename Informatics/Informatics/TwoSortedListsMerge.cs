@@ -2,7 +2,7 @@
 
 namespace Informatics
 {
-    class TwoSortedListsMerge<T> where T : IComparable
+    class TwoSortedListsMerge<T> where T : IComparable<T>
     {
         public static SinglyLinkedList<T> Merge(SinglyLinkedList<T> First, SinglyLinkedList<T> Second)
         {

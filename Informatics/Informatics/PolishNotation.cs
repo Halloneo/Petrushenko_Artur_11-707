@@ -160,14 +160,14 @@ namespace Informatics
         }
     }
 
-    class Program
+    class ConverterAndSolver
     {
         public static double ConvertAndSolve(string str)
         {
             return new PolskaSolver(str).Answer;
         }
 
-        static void Main(string[] args)
+        static void Do(string[] args)
         {
             var str = "25+3*8+4/2-6";
             //238*+42/+6- 
