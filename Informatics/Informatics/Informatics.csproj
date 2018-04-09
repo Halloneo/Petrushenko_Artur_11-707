@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CF46045F-13D7-4254-B106-8AC4F12FB835}</ProjectGuid>
+    <ProjectGuid>{12015718-69CB-4A30-BFC0-50AB452A5ECB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ZhegalkinPolinom</RootNamespace>
-    <AssemblyName>ZhegalkinPolinom</AssemblyName>
+    <RootNamespace>Informatics</RootNamespace>
+    <AssemblyName>Informatics</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conjunct.cs" />
-    <Compile Include="LinkedConjunctList.cs" />
+    <Compile Include="PolishNotation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZhegalkinPolinom.cs" />
+    <Compile Include="SegmentTree.cs" />
+    <Compile Include="SinglyLinkedList.cs" />
+    <Compile Include="TwoSortedListsMerge.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
