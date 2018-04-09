@@ -14,8 +14,6 @@ namespace LinqToObj__7
 
             var code = new Random().Next(0, 101);
 
-            clients = clients.OrderBy(client => client.Year).ToList();
-
             foreach (var client in clients)
             {
                 Console.WriteLine(client);
@@ -26,18 +24,23 @@ namespace LinqToObj__7
                 .GroupBy(client => new { client.Year, client.Code },
                 (currClient, month) => 
                 new {
-                        currClient = currClient,
+                        currClient,
                         month = month.First(client => client.Duration == month.Max(client1 => client1.Duration))
                     })
-                .Where(client => client.currClient.Code == code);
+                .Where(client => client.currClient.Code == code)
+                .OrderByDescending(data => data.currClient.Year);
 
-            Console.WriteLine(code);
-
-            foreach (var item in answer)
+            if (answer.Any())
             {
-                Console.WriteLine($"{item.month.Year} {item.month.Month}");
+                foreach (var item in answer)
+                {
+                    Console.WriteLine($"{item.month.Year} {item.month.Month}");
+                }
             }
-            
+            else
+            {
+                Console.WriteLine("Нет данных");
+            }
         }
     }
 }

@@ -19,12 +19,18 @@ namespace LinqToObj_29
             Console.WriteLine();
 
             var answer = inhabitants
-                .GroupBy(human => (human.Apartment - 1) / 36 + 1, (entrance, inhabitant) =>
-               new { entrance, inhabitant = inhabitant.Where(man1 => man1.Debt == inhabitant.Max(allMen => allMen.Debt)) });
+                .GroupBy(human => (human.Apartment - 1) / 36 + 1, 
+                (entrance, inhabitant) => 
+                new { entrance, inhabitant = inhabitant
+                    .Where(man1 => man1.Debt == inhabitant
+                    .Max(allMen => allMen.Debt)) })
+                .OrderBy(data => data.entrance);
 
             foreach (var item in answer)
             {
-                Console.WriteLine($"{item.entrance}\t{item.inhabitant.First()}");
+                if (item.inhabitant.Any(data => data.Debt != 0))
+                    Console.WriteLine($"{item.entrance}\t{item.inhabitant.First()}");
+
             }
         }
     }

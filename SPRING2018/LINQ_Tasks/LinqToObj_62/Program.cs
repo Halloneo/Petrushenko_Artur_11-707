@@ -19,24 +19,21 @@ namespace LinqToObj_62
             Console.WriteLine();
 
             var answer = students
-                .GroupBy(student => new { student.Surname, student.Initials }, (stud, subjects) =>
+                .GroupBy(student => new { student.Surname, student.Initials, student.Grade }, (stud, subjects) =>
                  new
                  {
                      stud,
-                     subjects = subjects.GroupBy(x => x.Subject, (subject, marks) =>
-                     new
-                     {
-                         subject,
-                         marks = marks.Count()             
-                    })
-                });
+                     algebra = subjects.Where(x => x.Subject == "Algebra").Count(),
+                     informatics = subjects.Where(x => x.Subject == "Informatics").Count(),
+                     geometry = subjects.Where(x => x.Subject == "Geometry").Count()
+                 })
+                .OrderBy(data => data.stud.Grade)
+                .ThenBy(data => data.stud.Surname)
+                .ThenBy(data => data.stud.Initials);
 
             foreach (var item in answer)
             {
-                foreach (var subject in item.subjects)
-                {
-                    Console.WriteLine($"{item.stud.Initials} {item.stud.Surname} {subject.subject} {subject.marks}");
-                }
+                Console.WriteLine($"{item.stud.Grade}\t{item.stud.Surname} {item.stud.Initials}\t{item.algebra} {item.geometry} {item.informatics}");
             }
         }
     }

@@ -26,7 +26,8 @@ namespace LinqToObj_31
 
             foreach (var item in answer)
             {
-                Console.WriteLine($"{(item.Apartment - 1) / 36 + 1}\t{item}");
+                if (item.Debt != 0)
+                    Console.WriteLine($"{(item.Apartment - 1) / 36 + 1}\t{item}");
             }
         }
     }

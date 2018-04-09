@@ -26,7 +26,8 @@ namespace LinqToObj_51
                 {
                     school,
                     stud = student.Where(exam => exam.Points[2] == student.Max(exams => exams.Points[2]))
-                });
+                })
+                .OrderBy(data => data.school);
 
             foreach (var item in answer)
             {

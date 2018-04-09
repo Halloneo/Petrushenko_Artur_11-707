@@ -28,7 +28,8 @@ namespace LinqToObj_40
                     brand,
                     count = count.Count()
                 })
-            });
+            })
+            .OrderBy(data => data.street);
 
             foreach (var item in answer)
             {
