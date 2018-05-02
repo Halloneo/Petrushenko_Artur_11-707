@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LinqToObj_62
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var students = Generator.GetStudents(100);
 
@@ -23,9 +20,9 @@ namespace LinqToObj_62
                  new
                  {
                      stud,
-                     algebra = subjects.Where(x => x.Subject == "Algebra").Count(),
-                     informatics = subjects.Where(x => x.Subject == "Informatics").Count(),
-                     geometry = subjects.Where(x => x.Subject == "Geometry").Count()
+                     algebra = subjects.Count(x => x.Subject == "Algebra"),
+                     informatics = subjects.Count(x => x.Subject == "Informatics"),
+                     geometry = subjects.Count(x => x.Subject == "Geometry")
                  })
                 .OrderBy(data => data.stud.Grade)
                 .ThenBy(data => data.stud.Surname)
