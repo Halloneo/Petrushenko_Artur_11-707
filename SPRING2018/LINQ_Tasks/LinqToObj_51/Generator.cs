@@ -59,7 +59,7 @@ namespace LinqToObj_51
         public static void Generate(int size)
         {
             var random = new Random();
-            var directory = @"D:\VisualStudio Projects\LINQ_Tasks\Data";
+            var directory = @"C:\Users\petru\Desktop\Data";
 
             using (StreamWriter sw = new StreamWriter($"{directory}\\LinqToObj_51.txt"))
             {
@@ -73,7 +73,7 @@ namespace LinqToObj_51
         public static List<Student> GetStudents(int size)
         {
             Generate(size);
-            var directory = @"D:\VisualStudio Projects\LINQ_Tasks\Data";
+            var directory = @"C:\Users\petru\Desktop\Data";
 
             var list = new List<string>();
 

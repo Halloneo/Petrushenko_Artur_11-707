@@ -47,28 +47,28 @@ namespace LinqToObj_95
 
             var answer = customers.Join(discounts, x => x.Code, x => x.Code, (x, y) => new
             {
-                Code = x.Code,
-                Street = x.Street,
-                Year = x.Year,
-                Name = y.Name,
+                x.Code,
+                x.Street,
+                x.Year,
+                y.Name,
                 Discount = y.Percents
             }).Join(purchases, x => x.Code, x => x.Code, (x, y) => new
             {
-                Code = x.Code,
-                Street = x.Street,
-                Year = x.Year,
-                Name = x.Name,
-                Discount = x.Discount,
-                VendorCode = y.VendorCode
+                x.Code,
+                x.Street,
+                x.Year,
+                x.Name,
+                x.Discount,
+                y.VendorCode
             }).Join(products, x => x.VendorCode, x => x.VendorCode, (x, y) => new
             {
-                Code = x.Code,
-                Street = x.Street,
-                Year = x.Year,
-                Name = x.Name,
-                Discount = x.Discount,
-                VendorCode = x.VendorCode,
-                Price = y.Price
+                x.Code,
+                x.Street,
+                x.Year,
+                x.Name,
+                x.Discount,
+                x.VendorCode,
+                y.Price
             }).GroupBy(x => new {x.VendorCode, x.Street}, (key, value) => new
             {
                 key,

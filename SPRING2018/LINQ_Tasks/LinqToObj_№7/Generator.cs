@@ -62,7 +62,7 @@ namespace LinqToObj__7
         public static void Generate(int size)
         {
             var random = new Random();
-            var directory = @"D:\VisualStudio Projects\LINQ_Tasks\Data";
+            var directory = @"C:\Users\petru\Desktop\Data";
 
             using (StreamWriter sw = new StreamWriter($"{directory}\\LinqToObj_7.txt"))
             {
@@ -76,7 +76,7 @@ namespace LinqToObj__7
         public static List<FitnesClient> GetCLients(int size)
         {
             Generate(size);
-            var directory = @"D:\VisualStudio Projects\LINQ_Tasks\Data";
+            var directory = @"C:\Users\petru\Desktop\Data";
 
             var list = new List<string>();
             var clients = new List<FitnesClient>();

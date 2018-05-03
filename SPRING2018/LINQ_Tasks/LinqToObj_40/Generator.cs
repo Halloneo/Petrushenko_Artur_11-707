@@ -58,7 +58,7 @@ namespace LinqToObj_40
         public static void Generate(int size)
         {
             var random = new Random();
-            var directory = @"D:\VisualStudio Projects\LINQ_Tasks\Data";
+            var directory = @"C:\Users\petru\Desktop\Data";
             var dict = new List<Tuple<string, string, int>>();
 
             using (StreamWriter sw = new StreamWriter($"{directory}\\LinqToObj_40.txt"))
@@ -91,7 +91,7 @@ namespace LinqToObj_40
         public static List<PetrolStation> GetPetrolStations(int size)
         {
             Generate(size);
-            var directory = @"D:\VisualStudio Projects\LINQ_Tasks\Data";
+            var directory = @"C:\Users\petru\Desktop\Data";
 
             var list = new List<string>();
 

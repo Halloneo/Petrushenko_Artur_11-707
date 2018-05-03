@@ -10,7 +10,7 @@ namespace LinqToObj_40
     {
         static void Main(string[] args)
         {
-            var petrolStations = Generator.GetPetrolStations(10);
+            var petrolStations = Generator.GetPetrolStations(50);
 
             foreach (var item in petrolStations)
             {

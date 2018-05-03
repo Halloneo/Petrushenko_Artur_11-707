@@ -10,7 +10,7 @@ namespace LinqToObj_18
     {
         static void Main(string[] args)
         {
-            var enrollees = Generator.GetEnrollees(10);
+            var enrollees = Generator.GetEnrollees(100);
 
             foreach (var enrollee in enrollees)
             {

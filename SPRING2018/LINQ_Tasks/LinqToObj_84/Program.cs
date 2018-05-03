@@ -39,17 +39,17 @@ namespace LinqToObj_84
             var answer = purchases.Join(products, x => x.VendorCode, x => x.VendorCode,
                     (x, y) => new
                     {
-                        Name = x.Name,
-                        VendorCode = x.VendorCode,
-                        Price = y.Price,
-                        Code = x.Code
+                        x.Name,
+                        x.VendorCode,
+                        y.Price,
+                        x.Code
                     })
                 .Join(discounts, x => x.Code, x => x.Code, (x, y) => new
                 {
-                    Name = x.Name,
-                    VendorCode = x.VendorCode,
-                    Price = x.Price,
-                    Code = x.Code,
+                    x.Name,
+                    x.VendorCode,
+                    x.Price,
+                    x.Code,
                     Discount = y.Percents
                 })
                 .GroupBy(x => new {x.Name, x.VendorCode},
